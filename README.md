@@ -17,7 +17,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 | Problem ID | Title | Difficulty | Solution |
 | :---: | :--- | :---: | :---: |
-| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy | [1757-recyclable-and-low-fat-products.sql](./01-Select/1757-recyclable-and-low-fat-products.sql) |
+| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy | [1757-recyclable-and-low-fat-products.sql](./1757-recyclable-and-low-fat-products.sql) |
 
 ---
 
