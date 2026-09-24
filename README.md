@@ -19,6 +19,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | :---: | :--- | :---: | :---: |
 | 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy | [1757-recyclable-and-low-fat-products.sql](./1757-recyclable-and-low-fat-products.sql) |
 | 584 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | Easy | [584-find-customer-referee.sql](./584-find-customer-referee.sql) |
+| 595 | [Big Countries](https://leetcode.com/problems/big-countries/) | Easy | [595-big-countries.sql](./595-big-countries.sql) |
 
 ---
 
@@ -34,5 +35,10 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 - **Goal:** Find the names of the customer that are not referred by the customer with `id = 2`.
 - **Key Concept:** Handling `NULL` values using `IS NULL` alongside inequality condition (`referee_id != 2` OR `referee_id IS NULL`).
 
+### 595. Big Countries
+
+- **Goal:** Find the name, population, and area of the big countries (area at least 3 million sq km or population at least 25 million).
+- **Key Concept:** Filtering rows using multiple conditions with the `OR` logical operator.
+  
 ---
 *Maintained by **Mahin Akter Kona***
