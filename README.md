@@ -20,6 +20,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy | [1757-recyclable-and-low-fat-products.sql](./1757-recyclable-and-low-fat-products.sql) |
 | 584 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | Easy | [584-find-customer-referee.sql](./584-find-customer-referee.sql) |
 | 595 | [Big Countries](https://leetcode.com/problems/big-countries/) | Easy | [595-big-countries.sql](./595-big-countries.sql) |
+| 1148 | [Article Views I](https://leetcode.com/problems/article-views-i/) | Easy | [1148-article-views-I.sql](./1148-article-views-I.sql) |
 
 ---
 
@@ -39,6 +40,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find the name, population, and area of the big countries (area at least 3 million sq km or population at least 25 million).
 - **Key Concept:** Filtering rows using multiple conditions with the `OR` logical operator.
+  
+### 1148. Article Views I
+
+- **Goal:** Find all the authors that viewed at least one of their own articles.
+- **Key Concept:** Self-comparison using `WHERE author_id = viewer_id`, removing duplicates with `DISTINCT`, and sorting results using `ORDER BY`.
   
 ---
 *Maintained by **Mahin Akter Kona***
