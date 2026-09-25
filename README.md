@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 1 / 50
+- **Total Solved:** 6 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -22,6 +22,12 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 595 | [Big Countries](https://leetcode.com/problems/big-countries/) | Easy | [595-big-countries.sql](./595-big-countries.sql) |
 | 1148 | [Article Views I](https://leetcode.com/problems/article-views-i/) | Easy | [1148-article-views-I.sql](./1148-article-views-I.sql) |
 | 1683 | [Invalid Tweets](https://leetcode.com/problems/invalid-tweets/) | Easy | [1683-invalid-tweets.sql](./1683-invalid-tweets.sql) |
+
+### 2. Basic Joins
+
+| Problem ID | Title | Difficulty | Solution |
+| :---: | :--- | :---: | :---: |
+| 1378 | [Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | Easy | [1378-Replace-Employee-ID.sql](./1378-Replace-Employee-ID.sql) |
 
 ---
 
@@ -41,16 +47,21 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find the name, population, and area of the big countries (area at least 3 million sq km or population at least 25 million).
 - **Key Concept:** Filtering rows using multiple conditions with the `OR` logical operator.
-  
+
 ### 1148. Article Views I
 
 - **Goal:** Find all the authors that viewed at least one of their own articles.
 - **Key Concept:** Self-comparison using `WHERE author_id = viewer_id`, removing duplicates with `DISTINCT`, and sorting results using `ORDER BY`.
-  
-  ### 1683. Invalid Tweets
+
+### 1683. Invalid Tweets
 
 - **Goal:** Find the IDs of the invalid tweets where the number of characters used in the content is strictly greater than 15.
 - **Key Concept:** String function `CHAR_LENGTH()` to calculate the length of text in a column.
-  
+
+### 1378. Replace Employee ID With The Unique Identifier
+
+- **Goal:** Show the unique ID of each user, If a user does not have a unique ID replaced with `NULL`.
+- **Key Concept:** Combining tables using `LEFT JOIN` on matching IDs to preserve all records from the primary table.
+
 ---
 *Maintained by **Mahin Akter Kona***
