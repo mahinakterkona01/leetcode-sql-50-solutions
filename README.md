@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 6 / 50
+- **Total Solved:** 7 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -28,6 +28,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | Problem ID | Title | Difficulty | Solution |
 | :---: | :--- | :---: | :---: |
 | 1378 | [Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | Easy | [1378-Replace-Employee-ID.sql](./1378-Replace-Employee-ID.sql) |
+| 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | Easy | [1068-Product-Sales-Analysis-I.sql](./1068-Product-Sales-Analysis-I.sql) |
 
 ---
 
@@ -62,6 +63,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Show the unique ID of each user, If a user does not have a unique ID replaced with `NULL`.
 - **Key Concept:** Combining tables using `LEFT JOIN` on matching IDs to preserve all records from the primary table.
+
+### 1068. Product Sales Analysis I
+
+- **Goal:** Report the `product_name`, `year`, and `price` for each `sale_id` in the Sales table.
+- **Key Concept:** Combining `Sales` and `Product` tables using `LEFT JOIN` on `product_id`.
 
 ---
 *Maintained by **Mahin Akter Kona***
