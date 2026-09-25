@@ -1,0 +1,8 @@
+
+-- Problem: 1683. Invalid Tweets
+-- Link: https://leetcode.com/problems/invalid-tweets/description/?envType=study-plan-v2&envId=top-sql-50
+-- Difficulty: Easy
+
+SELECT tweet_id 
+FROM Tweets
+WHERE CHAR_LENGTH(content)>15;
