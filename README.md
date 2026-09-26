@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 8 / 50
+- **Total Solved:** 9 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -30,6 +30,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1378 | [Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | Easy | [1378-Replace-Employee-ID.sql](./1378-Replace-Employee-ID.sql) |
 | 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | Easy | [1068-Product-Sales-Analysis-I.sql](./1068-Product-Sales-Analysis-I.sql) |
 | 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | Easy | [1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql](./1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql) |
+| 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | Easy | [197-Rising-Temperature.sql](./197-Rising-Temperature.sql) |
 
 ---
 
@@ -74,6 +75,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find the IDs of the users who visited without making any transactions and the count of such visits.
 - **Key Concept:** Using `LEFT JOIN` with `WHERE transaction_id IS NULL` to identify non-matching records, combined with `GROUP BY` and `COUNT()`.
+
+### 197. Rising Temperature
+
+- **Goal:** Find all dates' `id` with higher temperatures compared to its previous dates (yesterday).
+- **Key Concept:** Performing a Self-JOIN using the `DATE_ADD()` function to compare data between consecutive days.
 
 ---
 *Maintained by **Mahin Akter Kona***
