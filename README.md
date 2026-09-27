@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 9 / 50
+- **Total Solved:** 10 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -31,6 +31,12 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | Easy | [1068-Product-Sales-Analysis-I.sql](./1068-Product-Sales-Analysis-I.sql) |
 | 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | Easy | [1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql](./1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql) |
 | 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | Easy | [197-Rising-Temperature.sql](./197-Rising-Temperature.sql) |
+
+### 3. Sorting and Grouping
+
+| Problem ID | Title | Difficulty | Solution |
+| :---: | :--- | :---: | :---: |
+| 620 | [Not Boring Movies](https://leetcode.com/problems/not-boring-movies/) | Easy | [620-Not-Boring-Movies.sql](./620-Not-Boring-Movies.sql) |
 
 ---
 
@@ -80,6 +86,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find all dates' `id` with higher temperatures compared to its previous dates (yesterday).
 - **Key Concept:** Performing a Self-JOIN using the `DATE_ADD()` function to compare data between consecutive days.
+
+### 620. Not Boring Movies
+
+- **Goal:** Report the movies with an odd-numbered ID and a description that is not "boring", ordered by rating in descending order.
+- **Key Concept:** Modulo operation (`id % 2 != 0`) for odd-numbered filtering and sorting with `ORDER BY rating DESC`.
 
 ---
 *Maintained by **Mahin Akter Kona***
