@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 10 / 50
+- **Total Solved:** 11 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -31,6 +31,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | Easy | [1068-Product-Sales-Analysis-I.sql](./1068-Product-Sales-Analysis-I.sql) |
 | 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | Easy | [1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql](./1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql) |
 | 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | Easy | [197-Rising-Temperature.sql](./197-Rising-Temperature.sql) |
+| 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | Easy | [1661-Average-Time-of-Process-per-Machine.sql](./1661-Average-Time-of-Process-per-Machine.sql) |
 
 ### 3. Sorting and Grouping
 
@@ -86,6 +87,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find all dates' `id` with higher temperatures compared to its previous dates (yesterday).
 - **Key Concept:** Performing a Self-JOIN using the `DATE_ADD()` function to compare data between consecutive days.
+
+### 1661. Average Time of Process per Machine
+
+- **Goal:** Calculate the average time each machine takes to complete a process rounded to 3 decimal places.
+- **Key Concept:** Self-JOINing table on `machine_id` and `process_id` with `activity_type` ('start' and 'end'), using `AVG()` and `ROUND()`.
 
 ### 620. Not Boring Movies
 
