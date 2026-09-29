@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 11 / 50
+- **Total Solved:** 12 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -32,6 +32,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | Easy | [1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql](./1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql) |
 | 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | Easy | [197-Rising-Temperature.sql](./197-Rising-Temperature.sql) |
 | 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | Easy | [1661-Average-Time-of-Process-per-Machine.sql](./1661-Average-Time-of-Process-per-Machine.sql) |
+| 577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/) | Easy | [577-Employee-Bonus.sql](./577-Employee-Bonus.sql) |
 
 ### 3. Sorting and Grouping
 
@@ -92,6 +93,119 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Calculate the average time each machine takes to complete a process rounded to 3 decimal places.
 - **Key Concept:** Self-JOINing table on `machine_id` and `process_id` with `activity_type` ('start' and 'end'), using `AVG()` and `ROUND()`.
+
+### 577. Employee Bonus
+
+- **Goal:** Report the name and bonus amount of each employee with a bonus less than 1000 or no bonus at all.
+- **Key Concept:** Using `LEFT JOIN` to combine `Employee` and `Bonus` tables, handling missing records with `b.bonus IS NULL OR b.bonus < 1000`.
+
+### 620. Not Boring Movies
+
+- **Goal:** Report the movies with an odd-numbered ID and a description that is not "boring", ordered by rating in descending order.
+- **Key Concept:** Modulo operation (`id % 2 != 0`) for odd-numbered filtering and sorting with `ORDER BY rating DESC`.
+
+---
+*Maintained by **Mahin Akter Kona***
+# LeetCode SQL 50 Solutions 🚀
+
+Welcome to my **LeetCode SQL 50** journey! In this repository, I document my solutions, learnings, and query optimizations as I practice solving SQL problems regularly.
+
+---
+
+## 📊 Overall Progress
+
+- **Total Solved:** 12 / 50
+- **Database / Language:** MySQL
+
+---
+
+## 📂 Solved Problems
+
+### 1. Select
+
+| Problem ID | Title | Difficulty | Solution |
+| :---: | :--- | :---: | :---: |
+| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy | [1757-recyclable-and-low-fat-products.sql](./1757-recyclable-and-low-fat-products.sql) |
+| 584 | [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/) | Easy | [584-find-customer-referee.sql](./584-find-customer-referee.sql) |
+| 595 | [Big Countries](https://leetcode.com/problems/big-countries/) | Easy | [595-big-countries.sql](./595-big-countries.sql) |
+| 1148 | [Article Views I](https://leetcode.com/problems/article-views-i/) | Easy | [1148-article-views-I.sql](./1148-article-views-I.sql) |
+| 1683 | [Invalid Tweets](https://leetcode.com/problems/invalid-tweets/) | Easy | [1683-invalid-tweets.sql](./1683-invalid-tweets.sql) |
+
+### 2. Basic Joins
+
+| Problem ID | Title | Difficulty | Solution |
+| :---: | :--- | :---: | :---: |
+| 1378 | [Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | Easy | [1378-Replace-Employee-ID.sql](./1378-Replace-Employee-ID.sql) |
+| 1068 | [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) | Easy | [1068-Product-Sales-Analysis-I.sql](./1068-Product-Sales-Analysis-I.sql) |
+| 1581 | [Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | Easy | [1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql](./1581-Customer-Who-Visited-but-Did-Not-Make-Any-Transactions.sql) |
+| 197 | [Rising Temperature](https://leetcode.com/problems/rising-temperature/) | Easy | [197-Rising-Temperature.sql](./197-Rising-Temperature.sql) |
+| 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | Easy | [1661-Average-Time-of-Process-per-Machine.sql](./1661-Average-Time-of-Process-per-Machine.sql) |
+| 577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/) | Easy | [577-Employee-Bonus.sql](./577-Employee-Bonus.sql) |
+
+### 3. Sorting and Grouping
+
+| Problem ID | Title | Difficulty | Solution |
+| :---: | :--- | :---: | :---: |
+| 620 | [Not Boring Movies](https://leetcode.com/problems/not-boring-movies/) | Easy | [620-Not-Boring-Movies.sql](./620-Not-Boring-Movies.sql) |
+
+---
+
+## 💻 Problem Overview & Solution Summary
+
+### 1757. Recyclable and Low Fat Products
+
+- **Goal:** Find the IDs of products that are both low fat (`low_fats = 'Y'`) and recyclable (`recyclable = 'Y'`).
+- **Key Concept:** Basic `SELECT` statement with multiple condition filtering using the `AND` operator.
+
+### 584. Find Customer Referee
+
+- **Goal:** Find the names of the customer that are not referred by the customer with `id = 2`.
+- **Key Concept:** Handling `NULL` values using `IS NULL` alongside inequality condition (`referee_id != 2` OR `referee_id IS NULL`).
+
+### 595. Big Countries
+
+- **Goal:** Find the name, population, and area of the big countries (area at least 3 million sq km or population at least 25 million).
+- **Key Concept:** Filtering rows using multiple conditions with the `OR` logical operator.
+
+### 1148. Article Views I
+
+- **Goal:** Find all the authors that viewed at least one of their own articles.
+- **Key Concept:** Self-comparison using `WHERE author_id = viewer_id`, removing duplicates with `DISTINCT`, and sorting results using `ORDER BY`.
+
+### 1683. Invalid Tweets
+
+- **Goal:** Find the IDs of the invalid tweets where the number of characters used in the content is strictly greater than 15.
+- **Key Concept:** String function `CHAR_LENGTH()` to calculate the length of text in a column.
+
+### 1378. Replace Employee ID With The Unique Identifier
+
+- **Goal:** Show the unique ID of each user, If a user does not have a unique ID replaced with `NULL`.
+- **Key Concept:** Combining tables using `LEFT JOIN` on matching IDs to preserve all records from the primary table.
+
+### 1068. Product Sales Analysis I
+
+- **Goal:** Report the `product_name`, `year`, and `price` for each `sale_id` in the Sales table.
+- **Key Concept:** Combining `Sales` and `Product` tables using `LEFT JOIN` on `product_id`.
+
+### 1581. Customer Who Visited but Did Not Make Any Transactions
+
+- **Goal:** Find the IDs of the users who visited without making any transactions and the count of such visits.
+- **Key Concept:** Using `LEFT JOIN` with `WHERE transaction_id IS NULL` to identify non-matching records, combined with `GROUP BY` and `COUNT()`.
+
+### 197. Rising Temperature
+
+- **Goal:** Find all dates' `id` with higher temperatures compared to its previous dates (yesterday).
+- **Key Concept:** Performing a Self-JOIN using the `DATE_ADD()` function to compare data between consecutive days.
+
+### 1661. Average Time of Process per Machine
+
+- **Goal:** Calculate the average time each machine takes to complete a process rounded to 3 decimal places.
+- **Key Concept:** Self-JOINing table on `machine_id` and `process_id` with `activity_type` ('start' and 'end'), using `AVG()` and `ROUND()`.
+
+### 577. Employee Bonus
+
+- **Goal:** Report the name and bonus amount of each employee with a bonus less than 1000 or no bonus at all.
+- **Key Concept:** Using `LEFT JOIN` to combine `Employee` and `Bonus` tables, handling missing records with `b.bonus IS NULL OR b.bonus < 1000`.
 
 ### 620. Not Boring Movies
 
