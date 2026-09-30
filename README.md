@@ -6,7 +6,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 ## 📊 Overall Progress
 
-- **Total Solved:** 13 / 50
+- **Total Solved:** 14 / 50
 - **Database / Language:** MySQL
 
 ---
@@ -34,6 +34,7 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 | 1661 | [Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/) | Easy | [1661-Average-Time-of-Process-per-Machine.sql](./1661-Average-Time-of-Process-per-Machine.sql) |
 | 577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/) | Easy | [577-Employee-Bonus.sql](./577-Employee-Bonus.sql) |
 | 1280 | [Students and Examinations](https://leetcode.com/problems/students-and-examinations/) | Easy | [1280-Students-and-Examinations.sql](./1280-Students-and-Examinations.sql) |
+| 570 | [Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/) | Medium | [570-Managers-with-at-Least5Direct-Reports.sql](./570-Managers-with-at-Least5Direct-Reports.sql) |
 
 ### 3. Sorting and Grouping
 
@@ -104,6 +105,11 @@ Welcome to my **LeetCode SQL 50** journey! In this repository, I document my sol
 
 - **Goal:** Find the number of times each student attended each exam.
 - **Key Concept:** Using `CROSS JOIN` between `Students` and `Subjects` to get all combinations, combined with `LEFT JOIN` on `Examinations` and `COUNT()` with `GROUP BY`.
+
+### 570. Managers with at Least 5 Direct Reports
+
+- **Goal:** Find managers who have at least 5 direct reports.
+- **Key Concept:** Performing a Self-JOIN on `e1.id = e2.managerId`, aggregating with `GROUP BY`, and filtering using `HAVING COUNT(e2.id) >= 5`.
 
 ### 620. Not Boring Movies
 
